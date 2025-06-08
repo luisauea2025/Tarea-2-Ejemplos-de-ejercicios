@@ -1,0 +1,22 @@
+from abc import ABC, abstractmethod
+
+class Vehiculo(ABC):
+    @abstractmethod
+    def encender_motor(self):
+        pass
+
+    @abstractmethod
+    def conducir(self):
+        pass
+
+class Automovil(Vehiculo):
+    def encender_motor(self):
+        print("Motor del automóvil encendido.")
+
+    def conducir(self):
+        print("Conduciendo el automóvil por la carretera.")
+
+# Uso del ejemplo
+auto = Automovil()
+auto.encender_motor()
+auto.conducir()
